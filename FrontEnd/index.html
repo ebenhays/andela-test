@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Andela Test</title>
+</head>
+<body>
+    <div class="row justify-content-center" style="margin-top: 50px;">
+        <div class="col-4">
+            <button id="studInfo" type="button" class="btn btn-outline-primary" style="margin-bottom: 50px;">Component 1</button>
+        </div>
+        <div class="col-4">
+            <button id="graph" type="button" class="btn btn-outline-secondary">Component 2</button>
+        </div>
+    </div>
+    <div class ="container">
+    </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+        <script src='https://d3js.org/d3.v4.min.js'></script>
+        <script src="studentInfo.js"></script>
+        <script src="lineChart.js"></script>
+    <script>
+        document.querySelector(".row #studInfo").addEventListener('click', () => {
+            document.querySelector(".container").innerHTML = `<student-info></student-info>`;
+        });
+        document.querySelector(".row #graph").addEventListener('click', () => {
+            document.querySelector(".container").innerHTML = `<line-chart></line-chart>`;
+        });
+    </script>
+</body>
+</html>
